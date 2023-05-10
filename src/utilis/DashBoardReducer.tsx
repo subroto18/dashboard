@@ -131,6 +131,21 @@ export const dashboardReducer = (
         albumsDataLoading: true,
       };
 
+    case ActionKind.ALBUMS_API_SUCCESS:
+      return {
+        ...state,
+        albumsDataLoading: false,
+        numOfAlbums: payload,
+        albumsApirror: false,
+      };
+
+    case ActionKind.ALBUMS_API_FAILED:
+      return {
+        ...state,
+        albumsDataLoading: false,
+        albumsApirror: true,
+      };
+
     case ActionKind.USER_WITH_POST_LOADING:
       return {
         ...state,

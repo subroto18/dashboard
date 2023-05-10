@@ -81,8 +81,6 @@ export const Dashboard = () => {
       let data = await fetch("https://jsonplaceholder.typicode.com/users");
       let users = await data.json();
 
-      let post_user_data: any = [];
-
       if (Boolean(users.length > 0)) {
         let user_with_num_of_post = users.map(async (userData: any) => {
           let userId = userData.id;
