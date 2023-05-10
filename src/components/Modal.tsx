@@ -33,11 +33,6 @@ export const Modal = ({
 
   return (
     <div className="card flex justify-content-center">
-      <Button
-        label="Show"
-        icon="pi pi-external-link"
-        onClick={() => hideModal()}
-      />
       <Dialog
         header="User Details"
         visible={isVisible}
@@ -83,8 +78,11 @@ export const Modal = ({
 
             <div className="col-12">
               <div className="mt-2">
-                <h1>{title}</h1>
-                <p>{body}</p>
+                <h2>Latest Post:</h2>
+                <div>
+                  <h4>{title}</h4>
+                  <p>{body}</p>
+                </div>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ interface Props {
 export const Summary = (props: Props) => {
   return (
     <div className="grid">
-      <div className="col-6">
+      <div className="col-12  md:col-6 sm:col-12 ">
         <SummaryCard
           title="Number of Users"
           num_of_count={props.data.numOfUsers}
@@ -19,7 +19,7 @@ export const Summary = (props: Props) => {
           apiError={props.data.userApirror}
         />
       </div>
-      <div className="col-6">
+      <div className="col-12  md:col-6 sm:col-12">
         <SummaryCard
           title="Number of Posts"
           num_of_count={props.data.numOfPosts}
@@ -29,7 +29,7 @@ export const Summary = (props: Props) => {
           apiError={props.data.postApirror}
         />
       </div>
-      <div className="col-6">
+      <div className="col-12  md:col-6 sm:col-12">
         <SummaryCard
           title="Number of Comments"
           num_of_count={props.data.numOfComments}
@@ -39,7 +39,7 @@ export const Summary = (props: Props) => {
           apiError={props.data.commentsApirror}
         />
       </div>
-      <div className="col-6">
+      <div className="col-12  md:col-6 sm:col-12">
         <SummaryCard
           title="Number of Albums"
           num_of_count={props.data.numOfAlbums}

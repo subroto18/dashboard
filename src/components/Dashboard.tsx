@@ -121,10 +121,10 @@ export const Dashboard = () => {
 
   return (
     <div className="grid w-11 mx-auto mt-5">
-      <div className="col-6">
+      <div className="col-12 lg:col-6 md:col-6 sm:col-12">
         <Summary data={state} />
       </div>
-      <div className="col-6">
+      <div className="col-12 lg:col-6  md:col-6  sm:col-12">
         <PostChart data={state} />
       </div>
 

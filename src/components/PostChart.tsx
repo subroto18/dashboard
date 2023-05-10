@@ -36,21 +36,25 @@ export const PostChart = (props: Props) => {
   };
 
   return (
-    <div className="card">
-      <div>
-        {userPostAPiLoading ? (
+    <div className="grid">
+      <div className="col-12  md:col-12 sm:col-12">
+        <div className="card">
           <div>
-            <h1>Loading</h1>
-          </div> ? (
-            userPostAPiFailed
-          ) : (
-            <div>
-              <h1>Something went wrong</h1>
-            </div>
-          )
-        ) : (
-          <Chart type="line" data={data} />
-        )}
+            {userPostAPiLoading ? (
+              <div>
+                <h1>Loading</h1>
+              </div> ? (
+                userPostAPiFailed
+              ) : (
+                <div>
+                  <h1>Something went wrong</h1>
+                </div>
+              )
+            ) : (
+              <Chart type="line" data={data} />
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
